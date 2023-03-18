@@ -11,18 +11,17 @@ const Search = (props) => {
     <div className="search-container">
       <img
         className="search-icon"
-        src="https://assets.stickpng.com/images/585e4ae1cb11b227491c3393.png"
+        src="https://icon-library.com/images/search-bar-magnifying-glass-icon/search-bar-magnifying-glass-icon-19.jpg"
         alt="magnifying glass "
       />
-      
-        <input
+
+      <input
         className="search-input"
-          type="search"
-          placeholder="Search for a country.."
-          onChange={handleInputChange}
-          value={props.searchInput}
-        />
-      
+        type="search"
+        placeholder="Search for a country.."
+        onChange={handleInputChange}
+        value={props.searchInput}
+      />
     </div>
   );
 };
