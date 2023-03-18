@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: hsl(0, 0%, 98%); /*to change for dark mode*/
 }
 
 .App-logo {
@@ -37,6 +38,84 @@
   }
 }
 
+/* myCss */
+/*header*/
+.header {
+  height: 80px;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+  margin: 0;
+}
+
+.header-left {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 10%;
+}
+
+.header-right {
+    margin-right: 10%;
+}
+
+
+/*country card*/
+
+/*to align all div fetched from api*/
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  margin: 0 10% ;
+}
+/*delete gap after the last column*/
+.country-card:not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*style one card template*/
 .country-card {
-  border: 2px solid red;
+  border-radius: 5px;
+  box-shadow: 1px 1px 7px hsl(0, 0%, 92%);
+  width: 325px;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+}
+.container-flag {
+  padding: 0;
+  height: 50%;
+}
+.container-country-info {
+  padding: 0;
+  height: 50%;
+  margin: 10% 10% auto 10%;
+  text-align: left;
+}
+
+.container-country-info h1 {
+  font-size: 1.4rem;
+}
+
+.flag-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

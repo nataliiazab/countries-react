@@ -3,8 +3,10 @@ import React from "react";
 const Header = () => {
     return (
       <header>
-        <p>Where in the world?</p>
-        <p>Dark Mode</p>
+        <div className="header">
+          <p className="header-left">Where in the world?</p>
+          <p className="header-right">🌙Dark Mode</p>
+        </div>
       </header>
     );
 

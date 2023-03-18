@@ -4,7 +4,7 @@ import Header from "./Header";
 import Search from "./Search";
 import Filter from "./Filter";
 import CountryCard from "./CountryCard";
-
+import Footer from "./Footer";
 
 function App() {
   const [data, setData] = useState([]);
@@ -14,7 +14,6 @@ function App() {
         return response.json();
       })
       .then(function (myJson) {
-        console.log(myJson);
         setData(myJson);
       });
   };
@@ -26,9 +25,12 @@ function App() {
       <Header />
       <Search />
       <Filter />
-      {data.map((country) => (
-        <CountryCard key={country} country={country} />
-      ))}
+      <div className="card-container">
+        {data.map((country) => (
+          <CountryCard key={country} country={country} />
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 }
