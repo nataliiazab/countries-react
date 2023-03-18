@@ -8,6 +8,8 @@ import Footer from "./Footer";
 
 function App() {
   const [data, setData] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
+
   const getData = () => {
     fetch("https://restcountries.com/v3.1/all")
       .then(function (response) {
@@ -20,15 +22,34 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
+
+  // Filter the data based on search input
+  const searchedData = data.filter((country) => {
+    const nameMatch =
+      country.name.common.toLowerCase().indexOf(searchInput.toLowerCase()) !==
+      -1;
+    if (country.capital ) {
+      const capitalMatch =
+        country.capital[0]
+          .toLowerCase()
+          .indexOf(searchInput.toLowerCase()) !== -1;
+      return nameMatch || capitalMatch;
+    }
+    return nameMatch;
+  });
+
   return (
     <div className="App">
       <Header />
-      <Search />
-      <Filter />
+      <div className="search-and-filter">
+        <Search setSearchInput={setSearchInput} searchInput={searchInput} />
+        <Filter />
+      </div>
       <div className="card-container">
-        {data.map((country) => (
-          <CountryCard key={country} country={country} />
-        ))}
+        {searchedData.map((country) => {
+          console.log(country);
+          return <CountryCard key={country.cca3} country={country} />;
+        })}
       </div>
       <Footer />
     </div>

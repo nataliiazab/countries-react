@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: hsl(0, 0%, 98%); /*to change for dark mode*/
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .App-logo {
@@ -45,34 +46,88 @@
   background-color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: row;
-justify-content: space-between;
+  justify-content: space-between;
   margin: 0;
+  box-shadow: 1px 1px 7px hsl(0, 0%, 92%);
 }
 
 .header-left {
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-left: 10%;
 }
 
 .header-right {
-    margin-right: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
+.mode-icon {
+  height: 25px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.mode-text {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  font-weight: 400;
+}
+
+/*Search and Filter*/
+
+.search-and-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 2rem auto;
+}
+@media (max-width: 375px) {
+  .search-and-filter {
+    flex-direction: column;
+  }
+}
+
+/*search*/
+.search-container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 45px;
+  width: 30%;
+  box-shadow: 1px 1px 7px hsl(0, 0%, 72%);
+  border-radius: 5px;
+}
+.search-icon {
+  height: 15px;
+  width: auto;
+  margin: 0 10px 0 10%;
+}
+.search-input {
+  border: none;
+  height: 45px;
+  width: 100%;
+}
 
 /*country card*/
 
-/*to align all div fetched from api*/
+.country-card:not(:last-child) {
+  margin-right: 2rem;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  margin: 0 10% ;
-}
-/*delete gap after the last column*/
-.country-card:not(:last-child) {
-  margin-right: 2rem;
+  margin: auto 10%;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -95,7 +150,8 @@ justify-content: space-between;
 .country-card {
   border-radius: 5px;
   box-shadow: 1px 1px 7px hsl(0, 0%, 92%);
-  width: 325px;
+  max-width: 325px;
+  min-width: 300px;
   background-color: hsl(0, 0%, 100%);
   overflow: hidden;
 }
@@ -108,10 +164,12 @@ justify-content: space-between;
   height: 50%;
   margin: 10% 10% auto 10%;
   text-align: left;
+  font-size: 14px;
 }
 
 .container-country-info h1 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  margin-bottom: 10%;
 }
 
 .flag-image {
