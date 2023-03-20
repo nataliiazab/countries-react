@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-      <footer>
+      <footer className='footer-container'>
         {" "}
         The website is created by{" "}
         <a href="https://www.linkedin.com/in/nataliia-zablotska/">

@@ -9,6 +9,7 @@ import Footer from "./Footer";
 function App() {
   const [data, setData] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [filterInput, setFilterInput] = useState("");
 
   const getData = () => {
     fetch("https://restcountries.com/v3.1/all")
@@ -23,19 +24,21 @@ function App() {
     getData();
   }, []);
 
-  // Filter the data based on search input
+  // Filter the data based on search input and filter region
   const searchedData = data.filter((country) => {
     const nameMatch =
       country.name.common.toLowerCase().indexOf(searchInput.toLowerCase()) !==
       -1;
-    if (country.capital ) {
+    const regionMatch =
+      filterInput === "" ||
+      country.region.toLowerCase() === filterInput.toLowerCase();
+    if (country.capital) {
       const capitalMatch =
-        country.capital[0]
-          .toLowerCase()
-          .indexOf(searchInput.toLowerCase()) !== -1;
-      return nameMatch || capitalMatch;
+        country.capital[0].toLowerCase().indexOf(searchInput.toLowerCase()) !==
+        -1;
+      return nameMatch & regionMatch || capitalMatch & regionMatch;
     }
-    return nameMatch;
+    return nameMatch & regionMatch;
   });
 
   return (
@@ -43,7 +46,7 @@ function App() {
       <Header />
       <div className="search-and-filter">
         <Search setSearchInput={setSearchInput} searchInput={searchInput} />
-        <Filter />
+        <Filter setFilterInput={setFilterInput} />
       </div>
       <div className="card-container">
         {searchedData.map((country) => {
