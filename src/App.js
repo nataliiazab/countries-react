@@ -6,10 +6,12 @@ import Filter from "./Filter";
 import CountryCard from "./CountryCard";
 import Footer from "./Footer";
 
+
 function App() {
   const [data, setData] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [filterInput, setFilterInput] = useState("");
+
 
   const getData = () => {
     fetch("https://restcountries.com/v3.1/all")
@@ -20,6 +22,7 @@ function App() {
         setData(myJson);
       });
   };
+
   useEffect(() => {
     getData();
   }, []);
@@ -42,20 +45,22 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <Header />
-      <div className="search-and-filter">
-        <Search setSearchInput={setSearchInput} searchInput={searchInput} />
-        <Filter setFilterInput={setFilterInput} />
+
+      <div className="App">
+        <Header />
+        <div className="search-and-filter">
+          <Search setSearchInput={setSearchInput} searchInput={searchInput} />
+          <Filter setFilterInput={setFilterInput} />
+        </div>
+        <div className="card-container">
+          {searchedData.map((country) => {
+            console.log(country);
+            return <CountryCard key={country.cca3} country={country} />;
+          })}
+        </div>
+        <Footer />
       </div>
-      <div className="card-container">
-        {searchedData.map((country) => {
-          console.log(country);
-          return <CountryCard key={country.cca3} country={country} />;
-        })}
-      </div>
-      <Footer />
-    </div>
+
   );
 }
 

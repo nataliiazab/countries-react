@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Header = () => {
   return (
     <header>
@@ -13,7 +14,7 @@ const Header = () => {
             alt="moon icon"
           />
         
-          <p className="mode-text">Dark Mode</p>
+          <p className="mode-text">Dark Mode to be developed</p>
         </div>
       </div>
     </header>
