@@ -1,8 +1,10 @@
 import React from "react";
 
-const CountryCard = ({ country }) => {
+const CountryCard = ({ country}) => {
   return (
-    <div className="country-card">
+    <div
+      
+    >
       <div className="container-flag">
         {" "}
         <img
