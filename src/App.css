@@ -6,7 +6,7 @@
 
 /*darkmode style*/
 .dark-mode {
-  background-color:  hsl(207, 26%, 17%);
+  background-color: hsl(207, 26%, 17%);
   color: hsl(0, 0%, 98%);
 }
 
@@ -19,7 +19,7 @@
 }
 
 .card-dark-mode {
-  background-color: hsl(209, 23%, 22%)
+  background-color: hsl(209, 23%, 22%);
 }
 
 .App-logo {
@@ -34,14 +34,14 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  /* color: white; */
+
 }
 
 .App-link {
@@ -82,21 +82,7 @@
   align-items: center;
 }
 
-.mode-icon {
-  height: 25px;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  margin-right: 5px;
-  overflow: hidden;
-}
 
-.mode-text {
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  font-weight: 400;
-}
 
 /*Search and Filter*/
 
@@ -227,13 +213,24 @@
 /*button for dark mode */
 
 
+
 .dark-mode-button {
-  width: 6em;
-  height: 6em;
+  width: 4em;
+  height: 4em;
   padding: 0.5em;
   border-radius: 50%;
   cursor: pointer;
-  border: none;
+  border: 2px solid #000000;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
+
+.dark-mode-button:hover {
+  background-color: #000000;
+  border-color: #ffffff;
+  color: hsl(0, 0%, 52%)}
+
 
