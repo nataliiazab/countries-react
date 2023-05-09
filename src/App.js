@@ -55,18 +55,13 @@ function App() {
         {searchedData.map((country) => {
           // console.log(country);
           return (
-            <div
-              className={`${
-                darkMode ? "card-dark-mode" : "card-light-mode"
-              } country-card`}
-            >
-              <CountryCard
-                arkMode={darkMode}
-                setDarkMode={setDarkMode}
-                key={country.cca3}
-                country={country}
-              />
-            </div>
+            <CountryCard
+              className={`${darkMode ? "card-dark-mode" : "card-light-mode"} `}
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+              key={country.cca3}
+              country={country}
+            />
           );
         })}
       </div>

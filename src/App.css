@@ -88,6 +88,7 @@
   display: flex;
   justify-content: center;
   margin-right: 5px;
+  overflow: hidden;
 }
 
 .mode-text {
@@ -222,3 +223,17 @@
 .footer-container {
   margin: 20rem auto 0rem auto;
 }
+
+/*button for dark mode */
+
+
+.dark-mode-button {
+  width: 6em;
+  height: 6em;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
