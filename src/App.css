@@ -214,23 +214,28 @@
 
 
 
-.dark-mode-button {
-  width: 4em;
-  height: 4em;
-  padding: 0.5em;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid #000000;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
+ .dark-mode-button {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+border: 2px solid hsl(200, 15%, 8%);
+cursor: pointer;
+
+} 
 
 .dark-mode-button:hover {
-  background-color: #000000;
-  border-color: #ffffff;
-  color: hsl(0, 0%, 52%)}
+  
+  border-color: orangered;
+  opacity: 70%
+} 
 
 
+.dark-mode-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+
+}
