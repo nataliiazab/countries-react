@@ -41,7 +41,7 @@ This project is based on a challenge from [FrontendMentor](https://www.frontendm
 
 ## Demo
 
-[Live demo link](https://nataliizab-countries-react.netlify.app/).
+[Live demo link](https://cyf-nataliizab-countries-react.netlify.app/).
 
 ## Contact
 
