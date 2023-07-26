@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Country Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Country Explorer is a web application that allows users to explore information about different countries around the world. It provides features such as country search, region-based filtering, and a toggle for light and dark mode.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search**: Users can search for countries by typing their names in the search bar. The search is case-insensitive and displays real-time results as the user types.
 
-### `npm start`
+- **Filter by Region**: Users can filter countries by their regions using a dropdown menu. They can select from options like Africa, Americas, Asia, Europe, and Oceania to view countries from a specific region.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Light/Dark Mode**: The application offers a dark mode for enhanced readability in low-light environments. Users can switch between light and dark mode using the toggle button in the header.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Country Information**: For each country displayed, users can view details such as the country's flag, population, region, and capital.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React: The front-end of the application is built using React, providing a smooth and responsive user interface.
 
-### `npm run build`
+- REST Countries API: Country data is fetched from the "https://restcountries.com/v3.1/all" API, which provides extensive information about countries worldwide.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- CSS: Styling and layout are implemented using CSS, with specific classes for light and dark mode.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the project locally, follow these steps:
 
-### `npm run eject`
+1. Clone the repository from the [GitHub Repo URL](https://github.com/nataliiazab/countries-react).
+2. Install the required dependencies by running `npm install` in the project directory.
+3. Start the development server with `npm start`.
+4. Access the application in your browser at `http://localhost:3000/`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions to this project are welcome! Feel free to fork the repository and create a pull request for any enhancements or bug fixes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Credits
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project was created by Natalie Zablotska - [LinkedIn](https://www.linkedin.com/in/nataliia-zablotska/). The country data comes from REST Countries API.
 
-## Learn More
+This project is based on a challenge from [FrontendMentor](https://www.frontendmentor.io/). Frontend Mentor is a platform that provides real-world front-end development challenges to help developers improve their skills.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Demo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Live demo link](https://nataliizab-countries-react.netlify.app/).
 
-### Code Splitting
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If any questions or inquiries, feel free to send them to [my email](nataliia.zab@gmail.com)!
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
