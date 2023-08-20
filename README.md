@@ -2,6 +2,9 @@
 
 Country Explorer is a web application that allows users to explore information about different countries around the world. It provides features such as country search, region-based filtering, and a toggle for light and dark mode.
 
+![Country-Explorer](https://github.com/nataliiazab/countries-react/assets/113237479/5d82e48d-7944-4ee3-b7d0-0559751a8578)
+
+
 ## Features
 
 - **Search**: Users can search for countries by typing their names in the search bar. The search is case-insensitive and displays real-time results as the user types.
